@@ -5,7 +5,7 @@ import com.cyitce.web.facade.base.Message;
 
 /**
  * @version V1.0
- * @desc:
+ * @desc: 错误的响应信息
  * @author: k7kit
  * @date: 2019-10-14
  */

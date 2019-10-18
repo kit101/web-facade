@@ -2,7 +2,7 @@ package com.cyitce.web.facade.base;
 
 /**
  * @version V1.0
- * @desc:
+ * @desc: 返回码
  * @author: k7kit
  * @date: 2019-10-14
  */

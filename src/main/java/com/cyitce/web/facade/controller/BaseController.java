@@ -20,23 +20,19 @@ import javax.servlet.http.HttpServletRequest;
  */
 public abstract class BaseController {
 
-    private static Logger logger;
-
-    public BaseController() {
-        logger = LoggerFactory.getLogger(this.getClass());
-    }
+    private final static Logger logger = LoggerFactory.getLogger(BaseController.class);
 
     @ExceptionHandler(Exception.class) //统一处理某一类异常，从而能够减少代码重复率和复杂度
     @ResponseStatus(HttpStatus.OK) //可以将某种异常映射为HTTP状态码
     @ResponseBody
     public BaseResponse handlerException(Exception ex, HttpServletRequest request) {
-        BaseResponse re;
+        BaseResponse re = RestResponse.error(ex);
         String uri = request.getRequestURI();
+        // 业务定义异常，日志等级为warn
         if (ex instanceof BaseException) {
-            re = RestResponse.error(ex);
             logger.warn("requestId: {},uri: {},\n {}: {}", re.getRequestId(), uri, ex.getClass().getName(), ex.getMessage());
         } else {
-            re = RestResponse.error(ex);
+            // 系统异常，日志类型为error
             StackTraceElement s = ex.getStackTrace()[0];
             logger.error("requestId: {},uri: {},\n {}.{}:{}\n {}: {}", re.getRequestId(), uri, s.getClassName(),
                     s.getMethodName(), s.getLineNumber(), ex.getClass().getName(), ex.getMessage());
