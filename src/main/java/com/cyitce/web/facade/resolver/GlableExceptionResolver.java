@@ -24,6 +24,13 @@ public class GlableExceptionResolver {
 
     private final static Logger logger = LoggerFactory.getLogger(GlableExceptionResolver.class);
 
+
+    GlableExceptionResolver() {
+        if (logger.isDebugEnabled()) {
+            logger.debug("Enabled {}.", this.getClass().getName());
+        }
+    }
+
     /**
      * 全局异常处理
      *
