@@ -6,9 +6,9 @@ package com.cyitce.web.facade.base;
  * @author: k7kit
  * @date: 2019-10-14
  */
-public interface Body extends Code {
+public interface Body<T> extends Code {
 
-    Body setData(Object object);
+    Body setData(T data);
 
-    Object getData();
+    T getData();
 }

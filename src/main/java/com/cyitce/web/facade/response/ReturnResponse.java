@@ -9,19 +9,18 @@ import com.cyitce.web.facade.base.Body;
  * @author: k7kit
  * @date: 2019-10-14
  */
-class ReturnResponse extends BaseResponse implements Body {
+class ReturnResponse<T> extends BaseResponse implements Body<T> {
 
-    private Object data;
+    private T data;
 
     private int errCode = 0;
 
 
     public ReturnResponse() {
-
     }
 
-    public ReturnResponse(Object o) {
-        this.setData(o);
+    public ReturnResponse(T data) {
+        this.setData(data);
     }
 
     protected void setErrCode(Integer code) {
@@ -29,20 +28,20 @@ class ReturnResponse extends BaseResponse implements Body {
     }
 
     @Override
-    public int getCode() {
-        return this.errCode;
+    public T getData() {
+        return this.data;
     }
 
+
     @Override
-    public Body setData(Object data) {
+    public Body setData(T data) {
         this.data = data;
         return this;
     }
 
     @Override
-    public Object getData() {
-        return this.data;
+    public int getCode() {
+        return this.errCode;
     }
-
 
 }
