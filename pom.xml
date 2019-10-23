@@ -4,7 +4,8 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.cyitce.web</groupId>
     <artifactId>common-facade</artifactId>
-    <version>RELEASE-0.0.3</version>
+    <!--<version>RELEASE-0.0.3</version>-->
+    <version>0.1.0.RELEASE</version>
     <name>common</name>
     <!--<description>统一web开发异常处理和响应体格式</description>-->
     <properties>
@@ -26,6 +27,11 @@
             <artifactId>spring-webmvc</artifactId>
             <version>5.0.7.RELEASE</version>
         </dependency>
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-databind</artifactId>
+            <version>2.10.0</version>
+        </dependency>
     </dependencies>
     <build>
         <plugins>
@@ -41,4 +47,16 @@
             </plugin>
         </plugins>
     </build>
+    <distributionManagement>
+        <repository>
+            <id>nexus-release</id>
+            <name>project release repository</name>
+            <url>http://192.168.172.43:8081/repository/maven-releases/</url>
+        </repository>
+        <snapshotRepository>
+            <id>nexus-snapshots</id>
+            <name>project snapshots repository</name>
+            <url>http://192.168.172.43:8081/repository/maven-snapshots/</url>
+        </snapshotRepository>
+    </distributionManagement>
 </project>
