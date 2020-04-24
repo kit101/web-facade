@@ -13,8 +13,8 @@ import com.cyitce.web.facade.exception.BaseException;
 public final class RestResponse {
 
     /**
-     * @desc 不需要返回数据，code 0
      * @return com.cyitce.web.facade.base.BaseResponse
+     * @desc 不需要返回数据，code 0
      * @author k7kit
      * @date 2019-10-18
      */
@@ -28,35 +28,35 @@ public final class RestResponse {
     }
 
     /**
-     * @desc data为参数data,code 0
      * @param data 返回数据
      * @return com.cyitce.web.facade.base.BaseResponse
+     * @desc data为参数data, code 0
      * @author k7kit
      * @date 2019-10-18
      */
-    public static BaseResponse ok(Object data) {
+    public static <T> T ok(T data) {
         return ok(data, 0);
     }
 
     /**
-     * @desc 返回数据，code 为参数 code
      * @param data 返回数据
-     * @param code 返回码
+     * @param code 返回码
      * @return com.cyitce.web.facade.base.BaseResponse
+     * @desc 返回数据，code 为参数 code
      * @author k7kit
      * @date 2019-10-18
      */
-    public static BaseResponse ok(Object data, Integer code) {
-        ReturnResponse response = new ReturnResponse();
+    public static <T> T ok(T data, Integer code) {
+        ReturnResponse<T> response = new ReturnResponse<>();
         response.setData(data);
         response.setErrCode(code);
-        return response;
+        return response.getData();
     }
 
     /**
-     * @desc 非正常执行返回信息
      * @param ex 发生的异常
      * @return com.cyitce.web.facade.base.BaseResponse
+     * @desc 非正常执行返回信息
      * @author k7kit
      * @date 2019-10-18
      */
@@ -75,10 +75,10 @@ public final class RestResponse {
     }
 
     /**
-     * @desc 非正常执行返回信息
      * @param errCode 错误码
-     * @param errMsg 错误信息
+     * @param errMsg  错误信息
      * @return com.cyitce.web.facade.base.BaseResponse
+     * @desc 非正常执行返回信息
      * @author k7kit
      * @date 2019-10-18
      */

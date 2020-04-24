@@ -52,8 +52,6 @@ public enum ResponseCode implements Message {
     FREQUENT_OPERATION(40005,"操作频繁"),
     FILE_TOO_LARGE(40030,"文件大小超过限制"),
     FAILED_TO_UPLOAD_FILE(40031,"上传文件失败"),
-
-
     ;
 
     private int errCode;
