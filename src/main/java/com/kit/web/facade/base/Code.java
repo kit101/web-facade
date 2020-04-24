@@ -1,4 +1,4 @@
-package com.cyitce.web.facade.base;
+package com.kit.web.facade.base;
 
 /**
  * @version V1.0

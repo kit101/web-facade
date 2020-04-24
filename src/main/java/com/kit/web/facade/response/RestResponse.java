@@ -1,8 +1,8 @@
-package com.cyitce.web.facade.response;
+package com.kit.web.facade.response;
 
-import com.cyitce.web.facade.base.BaseResponse;
-import com.cyitce.web.facade.base.ResponseCode;
-import com.cyitce.web.facade.exception.BaseException;
+import com.kit.web.facade.base.BaseResponse;
+import com.kit.web.facade.base.ResponseCode;
+import com.kit.web.facade.exception.BaseException;
 
 /**
  * @version V1.0

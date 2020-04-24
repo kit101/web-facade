@@ -1,4 +1,4 @@
-package com.cyitce.web.facade.response;
+package com.kit.web.facade.response;
 
 import java.io.Serializable;
 import java.util.List;

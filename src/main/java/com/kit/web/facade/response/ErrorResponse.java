@@ -1,7 +1,7 @@
-package com.cyitce.web.facade.response;
+package com.kit.web.facade.response;
 
-import com.cyitce.web.facade.base.BaseResponse;
-import com.cyitce.web.facade.base.Message;
+import com.kit.web.facade.base.BaseResponse;
+import com.kit.web.facade.base.Message;
 
 /**
  * @version V1.0

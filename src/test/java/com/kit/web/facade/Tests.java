@@ -1,4 +1,4 @@
-package com.cyitce.web.facade;
+package com.kit.web.facade;
 
 import org.junit.Test;
 

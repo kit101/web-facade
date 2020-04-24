@@ -1,4 +1,4 @@
-package com.cyitce.web.facade.base;
+package com.kit.web.facade.base;
 
 import java.util.UUID;
 

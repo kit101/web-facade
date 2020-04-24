@@ -1,6 +1,6 @@
-package com.cyitce.web.facade.exception;
+package com.kit.web.facade.exception;
 
-import com.cyitce.web.facade.base.Message;
+import com.kit.web.facade.base.Message;
 
 import java.util.Date;
 

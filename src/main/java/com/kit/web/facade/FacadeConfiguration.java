@@ -1,6 +1,6 @@
-package com.cyitce.web.facade;
+package com.kit.web.facade;
 
-import com.cyitce.web.facade.resolver.GlableExceptionResolver;
+import com.kit.web.facade.resolver.GlableExceptionResolver;
 import com.fasterxml.jackson.core.JsonGenerator;
 import com.fasterxml.jackson.core.JsonParser;
 import com.fasterxml.jackson.databind.DeserializationFeature;

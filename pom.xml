@@ -3,10 +3,10 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.kit101.web</groupId>
-    <artifactId>common-facade</artifactId>
+    <artifactId>web-facade</artifactId>
     <version>0.1.2.SHOTSPOT</version>
 
-    <name>common</name>
+    <name>web-facade</name>
     <!--<description>统一web开发异常处理和响应体格式</description>-->
     <properties>
         <java.version>1.8</java.version>
@@ -38,6 +38,7 @@
             <version>4.12</version>
             <scope>test</scope>
         </dependency>
+
     </dependencies>
     <build>
         <plugins>
@@ -53,16 +54,17 @@
             </plugin>
         </plugins>
     </build>
-    <distributionManagement>
-        <repository>
-            <id>nexus-release</id>
-            <name>project release repository</name>
-            <url>http://192.168.172.43:8081/repository/maven-releases/</url>
-        </repository>
-        <snapshotRepository>
-            <id>nexus-snapshots</id>
-            <name>project snapshots repository</name>
-            <url>http://192.168.172.43:8081/repository/maven-snapshots/</url>
-        </snapshotRepository>
-    </distributionManagement>
+    <!--<distributionManagement>-->
+        <!--<repository>-->
+            <!--<id>nexus-release</id>-->
+            <!--<name>project release repository</name>-->
+            <!--<url>http://192.168.172.43:8081/repository/maven-releases/</url>-->
+        <!--</repository>-->
+        <!--<snapshotRepository>-->
+            <!--<id>nexus-snapshots</id>-->
+            <!--<name>project snapshots repository</name>-->
+            <!--<url>http://192.168.172.43:8081/repository/maven-snapshots/</url>-->
+        <!--</snapshotRepository>-->
+    <!--</distributionManagement>-->
+
 </project>
