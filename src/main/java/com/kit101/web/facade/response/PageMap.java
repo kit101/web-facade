@@ -1,4 +1,4 @@
-package com.kit.web.facade.response;
+package com.kit101.web.facade.response;
 
 import java.io.Serializable;
 import java.util.List;
@@ -25,8 +25,8 @@ public class PageMap<T> implements Serializable {
         this.list = list;
     }
 
-    public static PageMap build(Integer currentPage, Integer pageSize, Long total, Integer totalPages, List list) {
-        return new PageMap(currentPage, pageSize, total, totalPages, list);
+    public static <T> PageMap build(Integer currentPage, Integer pageSize, Long total, Integer totalPages, List<T> list) {
+        return new PageMap<>(currentPage, pageSize, total, totalPages, list);
     }
 
 

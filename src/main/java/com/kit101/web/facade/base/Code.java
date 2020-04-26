@@ -1,4 +1,4 @@
-package com.kit.web.facade.base;
+package com.kit101.web.facade.base;
 
 /**
  * @version V1.0

@@ -1,4 +1,4 @@
-package com.kit.web.facade.base;
+package com.kit101.web.facade.base;
 
 /**
  * @version V1.0
@@ -10,5 +10,5 @@ public interface Message extends Code {
 
     String getMessage();
 
-    Message setMassage(String errMsg);
+    Message message(String errMsg);
 }

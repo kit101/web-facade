@@ -1,4 +1,4 @@
-package com.kit.web.facade;
+package com.kit101.web.facade;
 
 import org.junit.Test;
 

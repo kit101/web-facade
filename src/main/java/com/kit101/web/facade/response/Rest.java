@@ -1,8 +1,8 @@
-package com.kit.web.facade.response;
+package com.kit101.web.facade.response;
 
-import com.kit.web.facade.base.BaseResponse;
-import com.kit.web.facade.base.ResponseCode;
-import com.kit.web.facade.exception.BaseException;
+import com.kit101.web.facade.base.BaseResponse;
+import com.kit101.web.facade.base.BaseCode;
+import com.kit101.web.facade.exception.BaseException;
 
 /**
  * @version V1.0
@@ -10,7 +10,7 @@ import com.kit.web.facade.exception.BaseException;
  * @author: k7kit
  * @date: 2019-10-14
  */
-public final class RestResponse {
+public final class Rest {
 
     /**
      * @return com.cyitce.web.facade.base.BaseResponse
@@ -34,7 +34,7 @@ public final class RestResponse {
      * @author k7kit
      * @date 2019-10-18
      */
-    public static <T> T ok(T data) {
+    public static <T> OkResponse ok(T data) {
         return ok(data, 0);
     }
 
@@ -46,11 +46,11 @@ public final class RestResponse {
      * @author k7kit
      * @date 2019-10-18
      */
-    public static <T> T ok(T data, Integer code) {
-        ReturnResponse<T> response = new ReturnResponse<>();
-        response.setData(data);
+    public static <T> OkResponse ok(T data, Integer code) {
+        OkResponse<T> response = new OkResponse<>();
+        response.data(data);
         response.setErrCode(code);
-        return response.getData();
+        return response;
     }
 
     /**
@@ -60,17 +60,17 @@ public final class RestResponse {
      * @author k7kit
      * @date 2019-10-18
      */
-    public static BaseResponse error(Exception ex) {
+    public static ErrorResponse error(Exception ex) {
         if (ex instanceof BaseException) {
             BaseException cex = BaseException.class.cast(ex);
             return error(cex.getCode(), cex.getMessage());
         } else {
-            return error(ResponseCode.UNKNOW_ERROR.getCode(), ex.getMessage());
+            return error(BaseCode.UNKNOWN_ERROR.getCode(), ex.getMessage());
         }
     }
 
 
-    public static BaseResponse error(ResponseCode error) {
+    public static ErrorResponse error(BaseCode error) {
         return error(error.getCode(), error.getMessage());
     }
 
@@ -82,9 +82,9 @@ public final class RestResponse {
      * @author k7kit
      * @date 2019-10-18
      */
-    public static BaseResponse error(Integer errCode, String errMsg) {
+    public static ErrorResponse error(Integer errCode, String errMsg) {
         ErrorResponse response = new ErrorResponse();
-        response.setMassage(errMsg);
+        response.message(errMsg);
         response.setErrCode(errCode);
         return response;
     }

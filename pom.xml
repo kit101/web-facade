@@ -4,7 +4,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.kit101.web</groupId>
     <artifactId>web-facade</artifactId>
-    <version>0.1.2.SHOTSPOT</version>
+    <version>0.1.4.SHOTSPOT</version>
 
     <name>web-facade</name>
     <!--<description>统一web开发异常处理和响应体格式</description>-->

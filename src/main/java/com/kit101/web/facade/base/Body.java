@@ -1,4 +1,4 @@
-package com.kit.web.facade.base;
+package com.kit101.web.facade.base;
 
 /**
  * @version V1.0
@@ -8,7 +8,7 @@ package com.kit.web.facade.base;
  */
 public interface Body<T> extends Code {
 
-    Body setData(T data);
+    Body data(T data);
 
     T getData();
 }

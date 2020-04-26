@@ -1,6 +1,6 @@
-package com.kit.web.facade.exception;
+package com.kit101.web.facade.exception;
 
-import com.kit.web.facade.base.Message;
+import com.kit101.web.facade.base.Message;
 
 import java.util.Date;
 
@@ -23,7 +23,7 @@ public class BaseException extends Exception implements Message {
     //接收自定义 errMsg 的方式构造业务异常（通过覆盖原本errMsg）
     public BaseException(Message commonError, String errMsg) {
         this.commonError = commonError;
-        this.commonError.setMassage(errMsg);
+        this.commonError.message(errMsg);
     }
 
     @Override
@@ -45,8 +45,8 @@ public class BaseException extends Exception implements Message {
     }
 
     @Override
-    public Message setMassage(String errMsg) {
-        this.commonError.setMassage(errMsg);
+    public Message message(String errMsg) {
+        this.commonError.message(errMsg);
         return this;
     }
 }

@@ -1,4 +1,4 @@
-package com.kit.web.facade.base;
+package com.kit101.web.facade.base;
 
 /**
  * @version V1.0
@@ -6,7 +6,7 @@ package com.kit.web.facade.base;
  * @author: k7kit
  * @date: 2019-10-14
  */
-public enum ResponseCode implements Message {
+public enum BaseCode implements Message {
     /**
      * 正常执行
      */
@@ -15,7 +15,7 @@ public enum ResponseCode implements Message {
     /**
      * 系统错误
      */
-    UNKNOW_ERROR(10001,"未知错误"),
+    UNKNOWN_ERROR(10001,"未知错误"),
     SYSTEM_BUSY(10002,"系统繁忙"),
     FORBID_ACCESS(10003,"禁止访问"),
     DATABASE_ERROR(10004,"数据库错误"),
@@ -57,7 +57,7 @@ public enum ResponseCode implements Message {
     private int errCode;
     private String errMsg;
 
-    private ResponseCode(int errCode, String errMsg) {
+    BaseCode(int errCode, String errMsg) {
         this.errCode = errCode;
         this.errMsg = errMsg;
     }
@@ -74,7 +74,7 @@ public enum ResponseCode implements Message {
     }
 
     @Override
-    public Message setMassage(String errMsg) {
+    public Message message(String errMsg) {
         this.errMsg = errMsg;
         return this;
     }

@@ -1,5 +1,6 @@
-package com.kit.web.facade.base;
+package com.kit101.web.facade.base;
 
+import java.io.Serializable;
 import java.util.UUID;
 
 /**
@@ -8,11 +9,9 @@ import java.util.UUID;
  * @author: k7kit
  * @date: 2019-10-14
  */
-public abstract class BaseResponse<T> implements Code {
+public abstract class BaseResponse<T> implements Code, Serializable {
 
-
-    private String requestId = UUID.randomUUID().toString().replace("-", "");
-
+    private String requestId;
 
     /**
      * requestId方便追踪定位错误，每次响应都是唯一的uuid.
@@ -20,6 +19,9 @@ public abstract class BaseResponse<T> implements Code {
      * @return
      */
     public String getRequestId() {
+        if (requestId == null) {
+            this.requestId = UUID.randomUUID().toString().replace("-", "");
+        }
         return requestId;
     }
 

@@ -1,1 +1,1 @@
-org.springframework.boot.autoconfigure.EnableAutoConfiguration=com.kit.web.facade.FacadeConfiguration
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=com.kit101.web.facade.FacadeConfiguration

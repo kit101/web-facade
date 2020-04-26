@@ -1,7 +1,7 @@
-package com.kit.web.facade.response;
+package com.kit101.web.facade.response;
 
-import com.kit.web.facade.base.BaseResponse;
-import com.kit.web.facade.base.Body;
+import com.kit101.web.facade.base.BaseResponse;
+import com.kit101.web.facade.base.Body;
 
 /**
  * @version V1.0
@@ -9,18 +9,18 @@ import com.kit.web.facade.base.Body;
  * @author: k7kit
  * @date: 2019-10-14
  */
-class ReturnResponse<T> extends BaseResponse implements Body<T> {
+public class OkResponse<T> extends BaseResponse implements Body<T> {
 
     private T data;
 
     private int errCode = 0;
 
 
-    public ReturnResponse() {
+    public OkResponse() {
     }
 
-    public ReturnResponse(T data) {
-        this.setData(data);
+    public OkResponse(T data) {
+        this.data(data);
     }
 
     protected void setErrCode(Integer code) {
@@ -34,7 +34,7 @@ class ReturnResponse<T> extends BaseResponse implements Body<T> {
 
 
     @Override
-    public Body setData(T data) {
+    public Body data(T data) {
         this.data = data;
         return this;
     }
