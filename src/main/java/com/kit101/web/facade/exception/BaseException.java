@@ -10,7 +10,7 @@ import java.util.Date;
  * @author: k7kit
  * @date: 2019-10-14
  */
-public class BaseException extends Exception implements Message {
+public class BaseException extends RuntimeException implements Message {
 
     private Message commonError;
 
