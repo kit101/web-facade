@@ -4,7 +4,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.kit101.web</groupId>
     <artifactId>web-facade</artifactId>
-    <version>0.1.5.SHOTSPOT</version>
+    <version>0.1.6.RELEASE</version>
 
     <name>web-facade</name>
     <!--<description>统一web开发异常处理和响应体格式</description>-->
@@ -38,7 +38,6 @@
             <version>4.12</version>
             <scope>test</scope>
         </dependency>
-
     </dependencies>
     <build>
         <plugins>
@@ -55,16 +54,16 @@
         </plugins>
     </build>
     <!--<distributionManagement>-->
-        <!--<repository>-->
-            <!--<id>nexus-release</id>-->
-            <!--<name>project release repository</name>-->
-            <!--<url>http://192.168.172.43:8081/repository/maven-releases/</url>-->
-        <!--</repository>-->
-        <!--<snapshotRepository>-->
-            <!--<id>nexus-snapshots</id>-->
-            <!--<name>project snapshots repository</name>-->
-            <!--<url>http://192.168.172.43:8081/repository/maven-snapshots/</url>-->
-        <!--</snapshotRepository>-->
+    <!--<repository>-->
+    <!--<id>nexus-release</id>-->
+    <!--<name>project release repository</name>-->
+    <!--<url>http://192.168.172.43:8081/repository/maven-releases/</url>-->
+    <!--</repository>-->
+    <!--<snapshotRepository>-->
+    <!--<id>nexus-snapshots</id>-->
+    <!--<name>project snapshots repository</name>-->
+    <!--<url>http://192.168.172.43:8081/repository/maven-snapshots/</url>-->
+    <!--</snapshotRepository>-->
     <!--</distributionManagement>-->
 
 </project>

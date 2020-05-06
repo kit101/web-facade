@@ -4,10 +4,10 @@ import com.kit101.web.facade.base.BaseResponse;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.http.HttpStatus;
-import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.ResponseStatus;
+import org.springframework.web.bind.annotation.RestControllerAdvice;
 
 import javax.servlet.http.HttpServletRequest;
 
@@ -17,7 +17,7 @@ import javax.servlet.http.HttpServletRequest;
  * @author: k7kit
  * @date: 2019-10-17
  */
-@ControllerAdvice
+@RestControllerAdvice
 public class GlobalExceptionResolver extends com.kit101.web.facade.resolver.ExceptionHandler {
 
     private final static Logger logger = LoggerFactory.getLogger(GlobalExceptionResolver.class);

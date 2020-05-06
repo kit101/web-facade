@@ -12,25 +12,24 @@ import com.kit101.web.facade.exception.BaseException;
  */
 public final class Rest {
 
+    final static String SUCCESS = "SUCCESS";
+
     /**
-     * @return com.cyitce.web.facade.base.BaseResponse
-     * @desc 不需要返回数据，code 0
+     * 不需要返回SUCCESS字符串，code 0
+     *
+     * @return com.kit101.web.facade.base.BaseResponse
      * @author k7kit
      * @date 2019-10-18
      */
     public static BaseResponse ok() {
-        return new BaseResponse() {
-            @Override
-            public int getCode() {
-                return 0;
-            }
-        };
+        return ok(SUCCESS);
     }
 
     /**
+     * data为参数data, code 0
+     *
      * @param data 返回数据
-     * @return com.cyitce.web.facade.base.BaseResponse
-     * @desc data为参数data, code 0
+     * @return com.kit101.web.facade.base.BaseResponse
      * @author k7kit
      * @date 2019-10-18
      */
@@ -39,10 +38,11 @@ public final class Rest {
     }
 
     /**
+     * 返回数据，code 为参数
+     *
      * @param data 返回数据
      * @param code 返回码
-     * @return com.cyitce.web.facade.base.BaseResponse
-     * @desc 返回数据，code 为参数 code
+     * @return com.kit101.web.facade.base.BaseResponse
      * @author k7kit
      * @date 2019-10-18
      */
@@ -54,9 +54,10 @@ public final class Rest {
     }
 
     /**
+     * 非正常执行返回信息
+     *
      * @param ex 发生的异常
-     * @return com.cyitce.web.facade.base.BaseResponse
-     * @desc 非正常执行返回信息
+     * @return com.kit101.web.facade.base.BaseResponse
      * @author k7kit
      * @date 2019-10-18
      */
@@ -75,10 +76,11 @@ public final class Rest {
     }
 
     /**
+     * 非正常执行返回信息
+     *
      * @param errCode 错误码
      * @param errMsg  错误信息
-     * @return com.cyitce.web.facade.base.BaseResponse
-     * @desc 非正常执行返回信息
+     * @return com.kit101.web.facade.base.BaseResponse
      * @author k7kit
      * @date 2019-10-18
      */

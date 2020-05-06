@@ -28,6 +28,7 @@ abstract class ExceptionHandler {
             StackTraceElement s = ex.getStackTrace()[0];
             log.error("requestId: {},uri: {},\n {}.{}:{}\n {}: {}", re.getRequestId(), uri, s.getClassName(),
                     s.getMethodName(), s.getLineNumber(), ex.getClass().getName(), ex.getMessage());
+            ex.printStackTrace();
         }
         return re;
     }
